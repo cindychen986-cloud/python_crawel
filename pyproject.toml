@@ -1,0 +1,7 @@
+[project]
+name = "python-crawel"
+version = "0.1.0"
+description = "職能發展學院phthon視窗網路爬蟲"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
