@@ -1,4 +1,4 @@
-mport random
+import random
 
 min=1
 max=50
