@@ -446,7 +446,7 @@ wheels = [
 ]
 
 [[package]]
-name = "python-crawel"
+name = "python-crawl"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
