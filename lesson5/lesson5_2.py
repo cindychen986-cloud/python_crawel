@@ -12,6 +12,10 @@ def get_news(page):
         print(title)
         print("=" * 60)
 
+def schedule_and_fare(page):
+    page.locator('#select_location01').select_option("台北")
+    page.locator('#select_location02').select_option("台南")
+
 def main():
     path = "https://www.thsrc.com.tw/"
     with sync_playwright() as p:
@@ -25,7 +29,7 @@ def main():
         page.wait_for_load_state("domcontentloaded")  # 等待DOM內容載入完成
         page.locator("button",has_text="我同意").click()  # 點擊同意按鈕
         get_news(page)
-    
+        schedule_and_fare(page)
 
         page.wait_for_timeout(3000)  # 等待3秒以觀察效果
 

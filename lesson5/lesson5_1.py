@@ -8,7 +8,8 @@ def get_html_path()-> str:
     return f"file://{html_path}"
 
 def demo_1_delayed_element(page):
-     #page.click("#trigger-delayed")  # 點擊按鈕觸發異步操作
+    """示範等待延遲加載的元素出現"""
+    #page.click("#trigger-delayed")  # 點擊按鈕觸發異步操作
     delay_button = page.locator("#trigger-delayed")  #取後Locator按鈕觸
     delay_button.click()  #發送點擊事件
 
@@ -26,8 +27,8 @@ def demo_1_delayed_element(page):
     content = page.locator("#delayed-content").text_content()
     print(f"延遲加載的內容: {content}")
 
-def demo_2_delayed_element(page):
-        """示範等待動態加載的內容出現"""
+def demo_2_dynamic_content(page):
+    """示範等待動態加載的內容出現"""
     page.click("#load-data")  # 點擊按鈕觸發異步操作
 
     #page.wait_for_selector("#dynamic-content", state="visible")
@@ -35,6 +36,8 @@ def demo_2_delayed_element(page):
     items = page.locator("#dynamic-content > .item").all()
     for item in items:
         print(f"動態加載的項目: {item.text_content()}")
+
+
 
 def main():
     path = get_html_path()
@@ -46,15 +49,12 @@ def main():
         page = browser.new_page()
 
         page.goto(path)
-           
+
+        
         page.wait_for_load_state("networkidle")  # 等待網絡空閒
         demo_1_delayed_element(page)
-        demo_2_delayed_element(page)
-        page.wait_for_timeout(3000)  # 等待3秒以觀察效果
-
+        demo_2_dynamic_content(page)
         browser.close()
-
-    
 
 if __name__ == "__main__":
     main()
