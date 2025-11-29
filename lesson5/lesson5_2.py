@@ -14,7 +14,7 @@ def main():
 
         page.goto(path)
         page.wait_for_load_state("domcontentloaded")  # 等待DOM內容載入完成
-
+        page.locator("button",has_text="我同意").click()  # 點擊同意按鈕
         page.wait_for_timeout(3000)  # 等待3秒以觀察效果
 
         browser.close()
