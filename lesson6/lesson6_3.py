@@ -24,7 +24,7 @@ async def main():
         result = await crawler.arun(
             url='http://example.com',
             config=run_config)
-        
+        #result是main中的區域變數，可以在main中被呼叫使用
 
     print(result.markdown)
 
