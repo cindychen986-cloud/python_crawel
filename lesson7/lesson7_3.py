@@ -8,8 +8,7 @@ async def main():
         <body>
             <div class='product-card'>
                 <h2>電競筆電 - 高效能遊戲機</h2>
-                <p>這款筆電配備最新的 RTX 4070 顯示卡，
-                   搭配 Intel i9 處理器，適合專業遊戲玩家。</p>
+                <p>這款筆電配備最新的 RTX 4070 顯示卡，搭配 Intel i9 處理器，適合專業遊戲玩家。</p>
                 <div class='price-section'>
                     <span class='old-price'>原價 $1499.99</span>
                 <span class='new-price'>特價 $1299.99</span>
@@ -20,7 +19,8 @@ async def main():
                 <h2>無線滑鼠 - 人體工學設計</h2>
                 <p>符合人體工學的無線滑鼠，電池續航力長達 3 個月。</p>
                 <div class='price-section'>
-                    <span class='new-price'>$29.99</span>
+                    <span class='old-price'>原價 $50.00</span>
+                    <span class='new-price'>特價$29.99</span>
                 </div>
                 <a href='https://example.com/wireless-mouse'>查看詳情</a>
             </div>
